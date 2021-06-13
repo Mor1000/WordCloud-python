@@ -22,6 +22,10 @@ def calculate_frequencies(file_contents):
     cloud.generate_from_frequencies(word_frequencies)
     return cloud.to_array()
 
+'''
+@param words_list -list of words
+@return dictionary with number of  occurrences for each word in the list
+'''
 def count_words_occurrences_in_list(words_list):
     words_occurrences = {}
     for word in words_list:
@@ -30,6 +34,7 @@ def count_words_occurrences_in_list(words_list):
         else:
             words_occurrences[word] += 1
     return words_occurrences
+
 with open('./test_file.txt', 'r') as f:
     file_contents = f.read()
     myimage = calculate_frequencies(file_contents)
